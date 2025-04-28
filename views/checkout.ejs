@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Kassan</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>FreakyFashion</h1>
+      <div class="input-i">
+        <form action="/products/search" method="GET" class="input-i">
+          <input 
+            class="search-bar" 
+            name="query" 
+            placeholder="Sök produkt"
+            aria-label="Search"
+          />
+        </form>
+        <div class="favicons">
+          <a href=""><i class="fa fa-heart"></i></a>
+          <a href="/checkout"><i class="fa fa-korg">&#xf291;</i></a>
+        </div>
+      </div>
+      </div>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list-item">Nyheter</li>
+          <li class="menu-list-item Kategorier">Kategorier</li>
+          <li class="menu-list-item">Topplistan</li>
+          <li class="menu-list-item">Rea</li>
+          <li class="menu-list-item">Kampanjer</li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <section id="kassan"> 
+      <h2>Kassan</h2>
+      <div id="kassan-section1"> 
+        <div> 1 x Svart T-Shirt<h5>199 SEK</h5></div>
+        <div>199 SEK</div>
+      </div>
+      <div id="kassan-section2"> 
+        <div> 2 x Vit T-Shirt<h5>199 SEK</h5></div>
+        <div>398 SEK</div>
+      </div>
+    </section>
+    <section id="table-checkout">
+      <table id="kassan-table" >
+        <tr>
+          <th scope="col"> Produkt </th>
+          <th scope="col"> Antal </th>
+          <th scope="col"> Pris </th>
+          <th scope="col"> Totalt </th>
+        </tr>
+        <tr>
+          <td>Svart T-Shirt </td>
+          <td> 1 </td>
+          <td> 199 kr</td>
+          <td> 199 kr </td>
+        </tr>
+        <tr>
+          <td>Vit T-Shirt </td>
+          <td> 2 </td>
+          <td> 199 kr</td>
+          <td> 398 kr </td> 
+        </tr>
+        <tr>
+          <td > </td>
+          <td> </td>
+          <td> </td>
+          <td> </td> 
+        </tr>
+      </table>
+    </section>
+    <section id="form">
+    <h3>Kunduppgifter</h3>
+    <form action="https://httpbin.org/get" method="get">  
+      <div id="form-flex">  
+          <div>
+            <label for="förnamn" >Förnamn </label>
+            <p><input type="text"  name="förnamn" id="förnamn" ></p>
+          </div>
+          <div>
+            <label for="Efternamn" >Efternamn </label>
+            <p><input type="text"  name="Efternamn" id="Efternamn" ></p>
+          </div>
+      </div> 
+          <label for="E-post">E-post </label>
+          <p class="epost-input"><input type="text"  name="E-post" id="E-post" ></p>
+        
+      <fieldset id="kassan-fieldset">
+        <legend>Adress</legend>
+          <p>Gata</p>
+            <input type="text" >
+          <p>Postnummer</p>
+            <input type="text" id="postN">
+          <p>Stad</p>
+            <input type="text" >
+      </fieldset>
+    </section>
+    <section id="nyhetsbrev-section">
+        <input type="checkbox" name="subscribe"> <label for="nyhetsbrevYo">Jag vill ta emot nyhetsbrev 
+        </label>
+        <button  class="köp-button" type="submit" formaction="https://httpbin.org/post" formmethod="post">Köp</button>
+    </section>
+  </form>
+  </main>
+  <footer>
+    <section id="payment-infosP3">
+      <div class="payment-infos-containerP3">
+        <div><i class="fa-solid fa-earth-americas"></i>Gratis frakt och returer</div>
+        <div><i class="fa-solid fa-plane"></i>Express frakt</div>
+        <div><i class="fa-sharp fa-solid fa-shield-halved"></i>Säkra betalningar</div>
+        <div><i class="fa-regular fa-face-smile"></i>Nyheter varje dag</div>
+      </div>
+    </section>
+    <section id="footer-sec">
+      <div id="footer"> 
+            <button class="accordion">Shopping</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Shopping</li>
+                <li>Vinterjackor</li>
+                <li>Pufferjackor</li>
+                <li>Kappa</li>
+                <li>Trenchcoats</li>
+              </ul>
+            </div>
+            <button class="accordion">Mina Sidor</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Mina Sidor</li>
+                <li>Mina ordrar</li>
+                <li>Mitt konto</li>
+              </ul>
+            </div>  
+            <button class="accordion">Kundjänst</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Kundjänst</li>
+                <li>Returnpolicy</li>
+                <li>Integritetspolicy</li>
+              </ul>
+            </div>
+          </div>
+          <small><p>&copy;FreakyFashion</p></small>
+        </section>
+  </footer>
+<script src="/js/accordion.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Administration</title>
+</head>
+<body>
+  <div id="produkter-sidebar"><div class="produkter-sidebar-title">Produkter</div></div>
+  <div id="admin-banniere"><h2>Administration</h2></div>
+  <div class="produkter-title">Ny Produkt</div>
+  <main id="NyProdukt-Form">
+    <form id="productForm" action="/products/api/products" method="POST" enctype="multipart/form-data">  
+      <div>  
+        <div>
+          <label for="namn">Namn</label>
+          <div><input type="text" placeholder="Ange namn" name="namn" id="namn" maxlength="25" required ></div>
+        </div>
+        <div>
+          <div><label for="Beskrivning">Beskrivning</label></div>
+          <textarea name="Beskrivning" id="Beskrivning" cols="30" rows="10" placeholder="Ange beskrivning"></textarea>
+        </div>
+      </div> 
+      <p>Bild</p>
+      <input type="file" placeholder="Ange URL" id="myFile" name="filename" accept="image/png, image/gif, image/jpeg" required >
+
+      <div> 
+        <label for="brand">Märke</label>
+        <div class="SKU"><input type="text"  name="brand" id="brand"></div>
+      </div>
+      <div> 
+        <label for="SKU">SKU</label>
+        <div class="SKU"><input type="text" placeholder="Ange SKU" name="SKU" id="SKU" pattern="[A-Z]{3}[0-9]{3}" title="Doit contenir 3 lettres majuscules suivies de 3 chiffres" required></div>
+      </div>
+      <div> 
+        <label for="Pris">Pris</label>
+        <div class="Pris"><input type="text" name="Pris" id="Pris" ></div>
+      </div>
+      <div> 
+        <label for="Publiseringsdatum">Publiseringsdatum</label>
+        <div class="Publiseringsdatum"><input type="date" name="Publiseringsdatum" id="Publiseringsdatum" ></div>
+      </div>
+
+      <section id="checkbox">
+        <button type="submit">Lägg till</button>
+      </section>
+    </form>  
+  </main>
+
+  <script>
+    document.getElementById('productForm').addEventListener('submit', async (event) => {
+      event.preventDefault(); // Empêche la soumission normale du formulaire
+      
+      const form = event.target;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('/products/api/products', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          alert("Produit ajouté avec succès!");
+          window.location.href = "http://localhost:3000/admin/products"; // Redirection vers la liste des produits
+        } else {
+          alert("Erreur lors de l'ajout du produit");
+        }
+      } catch (error) {
+        console.error("Erreur réseau :", error);
+        alert("Erreur réseau lors de l'ajout du produit");
+      }
+    });
+  </script>
+</body>
+</html>

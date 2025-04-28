@@ -1,0 +1,926 @@
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0.5rem;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+  min-width: 392px;
+
+}
+
+header {
+  min-width: 382px;
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-weight:700;
+  font-style: normal;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  border: 2px solid #333;
+  padding: 1rem;
+  margin: 0.6rem 1rem 1rem 0;
+  background-color: aquamarine;
+  animation: animate 3s linear infinite;
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo{
+  text-decoration: none;
+
+}
+
+.input-i {
+  display: flex;
+  width: 100%;
+  min-width: 300px;
+}
+
+h5 {
+  color: gray;
+}
+
+nav {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 1rem;
+  flex: 1;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 1rem;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.fa {
+  font-size: x-large;
+  flex: 0.2;
+}
+.favicons {
+  display: flex;
+}
+
+.fa-heart {
+  margin-left: 1rem;
+}
+.fa-korg {
+  margin-left: 1rem;
+}
+
+.menu-list-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.Kategorier {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+}
+a:visited {
+  color: #333;
+}
+/* ___________________________________________________________ HERO_________________________________________________
+ */
+
+#container-hero {
+  border: 2px solid #333;
+  margin-bottom: 1rem;
+  min-width: 382px;
+}
+
+#container-hero h2 {
+  font-size: 2.3rem;
+}
+.text {
+  text-align: center;
+  margin: 1rem 2rem 2rem;
+  font-size: 1.1rem;
+}
+#container-hero img {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+#spots {
+  display: none;
+}
+
+/* ___________________________________________________________ POPULÄRA PRODUKTER_________________________________________
+*/
+
+#populäraPrd {
+  width: 100%;
+}
+#populäraPrd .tshirt-container:nth-child(n + 5) {
+  display: none;
+}
+#populäraPrd img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.tshirt-container {
+  position: relative;
+  min-width: 382px;
+}
+.heart-p {
+  position: absolute;
+  bottom: 5.5rem;
+  right: 0.5rem;
+  font-size: x-large;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.heart-pp {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-size: xx-large;
+}
+.nyhet-p {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+.tshirt-infos-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+#populäraPrd h5 {
+  margin-bottom: 1.5rem;
+}
+
+#liknande-prod {
+  display: none;
+}
+
+/* ___________________________________footer */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid #333;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgba(167, 226, 242, 0.991);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+#payment-infos i,
+#payment-infosP3 i {
+  font-size: xx-large;
+  margin: 0 1rem 1rem 0;
+}
+.payment-infos-container div,
+.payment-infos-containerP3 div {
+  margin: 1rem 0 1rem 0;
+}
+#footer {
+  min-width: 382px;
+}
+
+#footer ul {
+  list-style: none;
+  line-height: 2rem;
+}
+.footer-title {
+  display: none;
+}
+.copyright-p {
+  margin-top: 30px;
+  text-align: center;
+  display: block;
+}
+
+/* _____________________________________P2 Product details
+ */
+
+.liknande-prod-h2 {
+  text-align: center;
+  margin: 1rem;
+  font-size: large;
+}
+
+#svartTshirt button {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  background-color: white;
+  padding: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#svartTshirt h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+#svartTshirt h4 {
+  margin-top: 20px;
+}
+
+#svartTshirt div {
+  margin: 1rem 0rem 2rem;
+  min-width: 50%;
+}
+
+#svartTshirt figure {
+  position: relative;
+}
+#svartTshirt img {
+  width: 100%;
+  height: auto;
+}
+#svartTshirt p {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.slideshow {
+  display: none;
+}
+
+/* __________________________P3 checkout______________________________
+ */
+#kassan {
+  min-width: 380px;
+}
+
+#kassan-section1,
+#kassan-section2 {
+  border: 2px solid #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0 0 0.2rem 0;
+}
+#kassan h5 {
+  margin: 0.5rem 0 0.5rem 0;
+}
+#kassan-section2 {
+  margin-bottom: 2rem;
+}
+main h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#kassan-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#kassan-table th {
+  padding: 0.4rem;
+  text-align: left;
+  background-color: rgb(197, 196, 196);
+  color: black;
+  border-right: 2px solid #333;
+}
+
+#kassan-table td {
+  padding: 8px;
+  border-right: 2px solid #333;
+}
+
+#kassan-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#form {
+  min-width: 380px;
+}
+
+fieldset {
+  border: 2px solid #000;
+  margin: 0.5rem 0 2rem;
+  height: auto;
+  padding: 1rem;
+  max-width: 100%;
+}
+#form input {
+  min-width: 100%;
+  margin: 1rem 0 1rem;
+  height: 2rem;
+}
+#form h3 {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+#fieldset input {
+  min-width: 90%;
+}
+#nyhetsbrev-section {
+  margin: 1rem 0 1rem 0;
+  min-width: 380px;
+}
+
+input#postN {
+  min-width: 40%;
+}
+
+.köp-button {
+  cursor: pointer;
+  padding: 0.3rem 3rem;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  background-color: white;
+  margin: 1rem auto 3rem;
+  display: flex;
+  font-size: large;
+  border: 2px solid #333;
+}
+.köp-button:hover {
+  opacity: 0.8;
+}
+.köp-button:active {
+  opacity: 0.7;
+}
+
+input[type="checkbox"] {
+  margin: 1rem 0;
+}
+
+#table-checkout {
+  display: none;
+}
+
+/* 
+_______________________________P4 INDEX__________________________________________________ */
+
+.delete-btn {
+  background: none; /* Supprime la couleur de fond */
+  border: none;     /* Supprime la bordure */
+  padding: 0;       /* Supprime le padding pour éviter tout espace supplémentaire */
+  cursor: pointer;  /* Garde le curseur en mode clic */
+
+}
+.delete-btn i {
+  font-size: 1.2em; /* Taille de l'icône */
+}
+#produkter-sidebar {
+  background-color: lightgray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30vh;
+  border: 2px solid #333;
+  color: black;
+}
+.produkter-sidebar-title {
+  margin: 15vh 0 0 5vh;
+  font-weight: bold;
+}
+
+#admin-banniere {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  height: 4rem;
+}
+#admin-banniere h2 {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: left;
+  margin: 1rem;
+}
+
+.ny-produkt-btn {
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 1);
+  background-color: white;
+  font-size: 1.15rem;
+  padding: 0.3em 0.6rem;
+  font-family: inherit;
+  max-width: 40%;
+  position: absolute;
+  top: 5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.ladda-produkt-btn {
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 1);
+  background-color: white;
+  font-size: 1.15rem;  
+  font-family: inherit;
+  padding: 0.3em 0.6rem;
+  max-width: 40%;
+  position: absolute;
+  top: 5rem;
+  right: 11rem;
+  cursor: pointer;
+  border-radius: 7px;
+
+}
+
+
+.ny-produkt-btn:hover {
+  opacity: 0.8;
+}
+.ny-produkt-btn:active {
+  opacity: 0.5;
+}
+
+table {
+  border: 2px solid #333;
+}
+#produkter {
+  border-collapse: collapse;
+  width: 80%;
+  margin-bottom: 1rem;
+  margin-left: 35vh;
+  margin-top: 24vh;
+  position: relative;
+}
+
+#produkter th {
+  padding: 0.4rem;
+  text-align: left;
+  background-color: rgb(197, 196, 196);
+  color: black;
+  border-right: 2px solid #333;
+}
+
+#produkter td {
+  padding: 8px;
+  border-right: 2px solid #333;
+}
+#produkter td:nth-child(4) {
+width: 2.5rem;
+}
+
+#produkter tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#produkter thead {
+  border-bottom: 2px solid #333;}
+
+.favicons-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* 
+_______________________________P5 NEW _______________________________*/
+
+.produkter-title {
+  position: absolute;
+  top: 15vh;
+  left: 35vh;
+  font-size: large;
+  font-weight: bold;
+}
+
+::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#NyProdukt-Form {
+  margin: 5rem 0 0 10rem;
+  padding: 4rem;
+}
+
+#Beskrivning {
+  width: 60%;
+  height: 300px;
+}
+
+textarea {
+  padding: 0.3rem 0 0 0.5rem;
+  font-family: inherit;
+  margin: 0.5rem 0;
+}
+
+#NyProdukt-Form input {
+  margin: 0.5rem 0 1rem;
+  height: 1.75rem;
+}
+
+#NyProdukt-Form input {
+  margin: 0.5rem 0 1rem;
+  height: 1.75rem;
+  width: 15rem;
+}
+
+#SKU {
+  padding-left: 0.4rem;
+}
+#namn {
+  padding-left: 0.4rem;
+}
+#checkbox input {
+  height: 1rem;
+  margin: 0;
+  width: 1rem;
+}
+
+#checkbox button {
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.katego-p {
+  margin: 0rem 0 1rem 0;
+}
+small{
+
+  display: flex; justify-content: center;
+  min-width: 388px;
+}
+
+/* _______________________________________________________MEDIA QUERIE____________________
+ */
+@media screen and (min-width: 640px) {
+  h1 {
+    margin-right: 1rem;
+    display: flex;
+    font-size: 2.5rem;
+    max-width: 330px;
+    justify-content: center;
+  }
+
+  .header-container {
+    max-width: 100%;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  .header-container h1 {
+    background-color: red;
+  }
+
+  .input-i {
+    flex: 1;
+    justify-content: space-between;
+    min-width: 0;
+  }
+  .fa {
+    font-size: x-large;
+    flex: 0.7;
+  }
+  .search-bar {
+    width: 0;
+    flex-grow: 1;
+    max-width: 280px;
+  }
+
+  .menu-list {
+    display: flex;
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .menu-list-item {
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+
+  #container-hero {
+    width: 100%;
+  }
+
+  #container-hero h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+
+  #populäraPrd {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    max-width: 100%;
+  }
+  #populäraPrd .tshirt-container:nth-child(n + 5) {
+    display: block;
+  }
+  .tshirt-container {
+    position: relative;
+    min-width: 0;
+  }
+
+  .payment-infos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0 2rem 4rem;
+    gap: 2rem;
+  }
+
+  #footer button {
+    display: none;
+  }
+
+  .footer-title {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  #footer {
+    display: flex;
+    column-gap: 60px;
+  }
+  #footer li {
+    margin-bottom: 0.5rem;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: block;
+  }
+
+  #footer-sec {
+    background-color: lightgrey;
+    border: 2px solid #333;
+    width: 100%;
+    padding: 1rem;
+  }
+  /*   _____________________________________________________p2___________________________________________
+ */
+
+  .heart-pp {
+    display: none;
+  }
+
+  .slideshow {
+    display: block;
+  }
+  #svartTshirt {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  #svartTshirt button {
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    background-color: white;
+    padding: 0.5rem;
+    max-width: 7rem;
+    cursor: pointer;
+    border: 2px solid #333;
+  }
+
+  #svartTshirt button:hover {
+    opacity: 0.8;
+  }
+  #svartTshirt button:active {
+    opacity: 0.7;
+  }
+
+  #svartTshirt h4 {
+    margin-top: 20px;
+  }
+  #svartTshirt div {
+    width: 40%;
+    margin-left: 20px;
+  }
+  #svartTshirt img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #liknande-prod {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  #liknande-prod a {
+    font-size: x-large;
+  }
+  .svart-tshirt-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* ________________________________________________P3 CHECKOUT_________________
+ */
+  .payment-infos-containerP3 {
+    display: none;
+  }
+
+  #kassan {
+    display: none;
+  }
+  #table-checkout {
+    display: block;
+  }
+
+  #form-flex {
+    display: flex;
+    column-gap: 1rem;
+  }
+  #form div {
+    flex: 1;
+  }
+  .epost-input {
+    width: 50%;
+  }
+
+  .köp-button {
+    margin-bottom: 4rem;
+  }
+}
+
+/* ____________________________________________________SLIDE-SHOW_____________________________________________
+ */
+#prev-btn,
+#next-btn {
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.liknande-produkt-h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: x-large;
+}
+
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  max-width: 55rem;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .Kategorier {
+    display: block;
+  }
+
+  #container-hero {
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+    width: 100%;
+  }
+
+  #container-hero img {
+    width: 60%;
+  }
+
+  .text {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #spots {
+    display: inline;
+  }
+
+  #spots figure {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+  }
+  #spots h3 {
+    color: red;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #spots img {
+    object-fit: cover;
+  }
+
+  .container-spots {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem;
+  }
+
+  #populäraPrd {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-top: 50px;
+  }
+
+  .payment-infos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .köp-button {
+    margin-bottom: 3.5rem;
+  }
+
+  #footer button {
+    display: none;
+  }
+
+  #footer {
+    display: flex;
+    column-gap: 60px;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: block;
+  }
+  #footer-sec {
+    background-color: lightgrey;
+    border: 2px solid #333;
+    padding: 1rem;
+  }
+
+  #svartTshirt p {
+    max-width: 65%;
+  }
+}

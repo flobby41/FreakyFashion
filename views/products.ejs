@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Svart T-Shirt</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a class="logo" href="/"><h1>FreakyFashion</h1></a>
+      <div class="input-i">
+        <form action="/products/search" method="GET" class="input-i">
+          <input 
+            class="search-bar" 
+            name="query" 
+            placeholder="Sök produkt"
+            aria-label="Search"
+          />
+        </form>
+        <div class="favicons">
+          <a href=""><i class="fa fa-heart"></i></a>
+          <a href="/checkout"><i class="fa fa-korg">&#xf291;</i></a>
+        </div>
+      </div>
+    </div>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list-item">Nyheter</li>
+          <li class="menu-list-item Kategorier">Kategorier</li>
+          <li class="menu-list-item">Topplistan</li>
+          <li class="menu-list-item">Rea</li>
+          <li class="menu-list-item">Kampanjer</li>
+        </ul>
+      </nav>
+  </header>
+  <main> 
+    <section id="svartTshirt">
+      <figure>
+      <img src="/img/shirts.webp" width="500" height="722" alt="T-shirts">
+      <i class="fa-regular fa-heart heart-pp"></i>
+      </figure>
+      <div>
+        <h3> T-Shirts </h3>
+        <h5>Piou-piou</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel deleniti, sed cupiditate facilis perspiciatis eligendi ea. Deleniti eius tempore vero accusantium, veniam assumenda quam eligendi cupiditate non impedit corrupti necessitatibus!</p>
+        <h4>149 SEK</h4>
+        <button>Lägg i varukorg</button>
+      </div>
+    </section>
+    <section class="slideshow"> 
+    <h3 class="liknande-produkt-h3"> Liknande Produkter </h3>
+    <div class="carousel-view" >
+      <button id="prev-btn" class="prev-btn">
+        <svg viewBox="0 0 512 512" width="20" >
+        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+        </svg>
+      </button>
+      <div id="item-list" class="item-list">
+      <% products.forEach(prod => { %>
+      <div>
+        <a href="/products/<%= prod.slug %>">
+          <img src="/img/<%= prod.picture %>" width="250" height="361"  alt="<%= prod.name %>">
+        </a>
+        <div class="svart-tshirt-container">
+          <p><%= prod.name %></p>
+          <p><%= prod.price %></p>
+        </div>
+        <h5><%= prod.brand %></h5>
+      </div>
+      <% }) %>
+      </div>
+      <button id="next-btn" class="next-btn">
+        <svg viewBox="0 0 512 512" width="20" >
+        <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <section id="payment-infos">
+      <div class="payment-infos-container">
+        <div><i class="fa-solid fa-earth-americas"></i>Gratis frakt och returer</div>
+        <div><i class="fa-solid fa-plane"></i>Express frakt</div>
+        <div><i class="fa-sharp fa-solid fa-shield-halved"></i>Säkra betalningar</div>
+        <div><i class="fa-regular fa-face-smile"></i>Nyheter varje dag</div>
+      </div>
+    </section>
+    <section id="footer-sec">
+      <div id="footer"> 
+            <button class="accordion">Shopping</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Shopping</li>
+                <li>Vinterjackor</li>
+                <li>Pufferjackor</li>
+                <li>Kappa</li>
+                <li>Trenchcoats</li>
+              </ul>
+            </div>
+            <button class="accordion">Mina Sidor</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Mina Sidor</li>
+                <li>Mina ordrar</li>
+                <li>Mitt konto</li>
+              </ul>
+            </div>  
+            <button class="accordion">Kundjänst</button>
+            <div class="panel">
+              <ul>
+                <li class="footer-title">Kundjänst</li>
+                <li>Returnpolicy</li>
+                <li>Integritetspolicy</li>
+              </ul>
+            </div>
+          </div>
+        <small><p>&copy;FreakyFashion</p></small>
+    </section>
+  </footer>
+<script src="/js/slide-show.js"></script>
+<script src="/js/accordion.js"></script>
+
+</body>
+</html>
