@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Freaky Fashion</title>
+  <style>
+    #populäraPrd .tshirt-container:nth-child(n + 5) {
+  display: block;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>FreakyFashion</h1>
+      <div class="input-i">
+        <form action="/products/search" method="GET" class="input-i">
+          <input 
+            class="search-bar" 
+            name="query" 
+            placeholder="Sök produkt"
+            aria-label="Search"
+          />
+        </form>
+        <div class="favicons">
+          <a href=""><i class="fa fa-heart"></i></a>
+          <a href="/checkout"><i class="fa fa-korg">&#xf291;</i></a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-list-item">Nyheter</li>
+        <li class="menu-list-item Kategorier">Kategorier</li>
+        <li class="menu-list-item">Topplistan</li>
+        <li class="menu-list-item">Rea</li>
+        <li class="menu-list-item">Kampanjer</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Hittade <%= products.length %> produkter</h2>
+    <section id="populäraPrd">
+        <% if (products.length > 0) { %>
+        <% products.forEach(product => { %>
+          <div class="tshirt-container"> 
+            <a href="/products/<%= product.slug %>">
+              <img src="/img/<%= product.picture %>" width="500" alt="<%= product.name %>" />
+            </a>
+            <a href=""><i class="fa-regular fa-heart heart-p"></i></a>
+            <div class="tshirt-infos-container">
+              <p><%= product.name %></p>
+              <p><%= product.price %></p>
+            </div>
+              <h5><%= product.brand %></h5>
+          </div>          
+        <% }) %>
+      </section>
+    <% } else { %>
+      <p>Aucun produit trouvé pour "<%= searchQuery %>".</p>
+    <% } %>
+  </main>
+  <footer>
+    <section id="payment-infos">
+      <div class="payment-infos-container">
+        <div>
+          <i class="fa-solid fa-earth-americas"></i>Gratis frakt och returer
+        </div>
+        <div><i class="fa-solid fa-plane"></i>Express frakt</div>
+        <div>
+          <i class="fa-sharp fa-solid fa-shield-halved"></i>Säkra betalningar
+        </div>
+        <div><i class="fa-regular fa-face-smile"></i>Nyheter varje dag</div>
+      </div>
+    </section>
+    <section id="footer-sec">
+      <div id="footer">
+        <button class="accordion">Shopping</button>
+        <div class="panel">
+          <ul>
+            <li class="footer-title">Shopping</li>
+            <li>Vinterjackor</li>
+            <li>Pufferjackor</li>
+            <li>Kappa</li>
+            <li>Trenchcoats</li>
+          </ul>
+        </div>
+        <button class="accordion">Mina Sidor</button>
+        <div class="panel">
+          <ul>
+            <li class="footer-title">Mina Sidor</li>
+            <li>Mina ordrar</li>
+            <li>Mitt konto</li>
+          </ul>
+        </div>
+        <button class="accordion">Kundjänst</button>
+        <div class="panel">
+          <ul>
+            <li class="footer-title">Kundjänst</li>
+            <li>Returnpolicy</li>
+            <li>Integritetspolicy</li>
+          </ul>
+        </div>
+      </div>
+      <small><p>&copy;FreakyFashion</p></small>
+    </section>
+  </footer>
+  <script src="/js/accordion.js"></script>
+</body>
+</html>

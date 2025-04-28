@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Administration </title>
+</head>
+<body>
+  <div id="produkter-sidebar"> <div class="produkter-sidebar-title"> Produkter</div></div>
+  <div id="admin-banniere"> <h2>Administration</h2></div>
+  <div class="produkter-title">Produkter</div>
+  <a href="/admin/products/new"> 
+  <button class="ny-produkt-btn"> Ny produkt </button>
+  </a>
+  <button class="ladda-produkt-btn" onclick="fetchData()"> Ladda produkter </button>
+  <table id="produkter">
+    <thead>
+      <tr>
+        <th scope="col"> Namn </th>
+        <th scope="col"> SKU </th>
+        <th scope="col"> Pris </th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+    <tbody id="data-output">
+    </tbody>
+  </table>
+  <script src="/js/adm.js"></script>
+    </body>
+    </html>
